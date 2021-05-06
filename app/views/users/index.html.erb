@@ -1,8 +1,10 @@
-<h1> User List </h1>
+<h1> Current user: <%= current_user.username %> </h1>
 
-<h2> Current user: <%= current_user.username %> </h2>
+<h2> Make a new event with this user: </h2>
 
 <%= link_to "New event", new_event_path %>
+
+<h2> List of users: </h2>
 
 <ul>
  <% @users.each do |user| %>
@@ -11,5 +13,9 @@
     </li>
     <% end %>
 </ul>
+
+<h2> List of events: </h2>
+
+<h2> Make a new user: </h2>
 
 <%= link_to "Add a new user", new_user_path %>
