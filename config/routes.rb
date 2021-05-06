@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "users#index"
+  root "sessions#new"
 
   resources :users
+  resources :sessions
+  resources :events
 end
