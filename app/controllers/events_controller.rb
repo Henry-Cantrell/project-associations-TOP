@@ -26,4 +26,4 @@ class EventsController < ApplicationController
     end
 end
 
-#Troubleshoot why events won't save.l
+#Troubleshoot why events won't save
