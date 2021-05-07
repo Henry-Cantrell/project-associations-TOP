@@ -1,8 +1,18 @@
+<h1> Event information: </h1>
+
 <ul>
-    <li><%= @event.name  %></li>
-    <li><%= @event.description  %></li>
-    <li><%= @event.date %></li>
-    <li><%= @event.creator %></li>
+    <li>Name: <%= @event.name  %></li>
+    <li>Description: <%= @event.description  %></li>
+    <li>Date: <%= @event.date %></li>
+    <li>Creator: <%= @event.creator.username %></li>
 </ul>
 
-<%= link_to "Home", root_path %>
+<h2> List of attendees: </h2>
+    <ul>
+    <% @event.users_attending.each do |user| %>
+        <li><%= user.username %></li>
+    <% end %>
+    </ul>
+
+<%= link_to "Sign up for this party", "/user_events?id=#{@event.id}", method: "post" %>
+

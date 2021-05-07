@@ -1,3 +1,12 @@
-<h1> <%= @user.username %> </h1>
+<h2> Name of this user: <%= @user.username %> </h2>
+
+<h2> List of events created by <%= @user.username %>: </h2>
+<ul>
+<% @user.events.each do |event| %>
+    <li>
+        <%= link_to event.name, event_path(event.id) %>
+    </li>
+    <% end %>
+</ul>
 
 <%= link_to "Home", root_path %>

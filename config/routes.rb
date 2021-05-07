@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :events
+  resources :user_events
 end
