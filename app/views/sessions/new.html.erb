@@ -1,4 +1,5 @@
 <h1> Log in </h1>
+<h2> Make an initial user first! </h2>
 
 <%= form_with url: "/sessions", method: :post do |form| %>
     <%= form.label :username, "Username:" %>
@@ -6,12 +7,5 @@
     <%= form.submit "Submit" %>
     <% end %>
 
-<h2> Try one of these usernames (case sensitive) in the above field: </h2>
+<%= link_to "Make a new user", new_user_path %>
 
-<ul>
- <% @users.each do |user| %>
-    <li>
-     <%= user.username %>
-    </li>
-    <% end %>
-</ul>

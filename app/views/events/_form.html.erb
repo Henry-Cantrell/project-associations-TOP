@@ -1,0 +1,9 @@
+<%= form_with(model: event, local: true) do |form| %>
+    <%= form.label :name, "Name:" %>
+    <%= form.text_field :name%>
+    <%= form.label :description, "Description:" %>
+    <%= form.text_field :description%>
+    <%= form.label :date, "Date:" %>
+    <%= form.date_select :date%>
+    <%= form.submit "Submit" %>
+    <% end %>
