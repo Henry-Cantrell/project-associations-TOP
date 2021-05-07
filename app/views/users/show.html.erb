@@ -9,4 +9,14 @@
     <% end %>
 </ul>
 
+<h2> List of events attended by <%= @user.username %>: </h2> 
+
+<ul>
+    <% @user.events_booked.each do |event| %>
+        <li>
+            <%= link_to event.name, event_path(event.id) %>
+        </li>
+    <% end %>
+</ul>
+
 <%= link_to "Home", root_path %>
